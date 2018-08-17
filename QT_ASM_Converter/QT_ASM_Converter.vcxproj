@@ -112,8 +112,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;XEDPARSE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\xed2\include;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\XEDParse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;XEDPARSE_STATIC;ZYDIS_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\xed2\include;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\XEDParse;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\zydis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -122,15 +122,15 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\xed2\lib;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\XEDParse;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\xed2\lib;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\XEDParse;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\zydis;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;XEDParse.lib;libxed_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;XEDParse.lib;libxed_x64.lib;Zydis.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\xed2\include;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\XEDParse;%(AdditionalIncludeDirectories)</IncludePath>
-      <Define>UNICODE;WIN32;WIN64;XEDPARSE_STATIC;%(PreprocessorDefinitions)</Define>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\xed2\include;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\XEDParse;F:\Project\QT\QT_ASM_Converter\QT_ASM_Converter\zydis\include;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;WIN32;WIN64;XEDPARSE_STATIC;ZYDIS_STATIC_DEFINE;%(PreprocessorDefinitions)</Define>
     </QtMoc>
     <QtUic>
       <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
@@ -216,6 +216,15 @@
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QT_ASM_Converter.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QT_ASM_Converter.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mywife.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

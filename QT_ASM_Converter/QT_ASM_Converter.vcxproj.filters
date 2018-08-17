@@ -52,4 +52,15 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QT_ASM_Converter.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mywife.ico" />
+  </ItemGroup>
 </Project>

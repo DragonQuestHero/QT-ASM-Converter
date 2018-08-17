@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="QT_ASM_Converter">
-    </qresource>
+  <qresource prefix="QT_ASM_Converter">
+    <file>mywife.ico</file>
+  </qresource>
 </RCC>

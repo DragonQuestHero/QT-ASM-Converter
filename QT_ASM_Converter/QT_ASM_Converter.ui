@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>242</height>
+    <height>229</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QT_ASM_Converter</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>mywife.ico</normaloff>mywife.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QRadioButton" name="X86_radioButton">
@@ -30,7 +34,7 @@
    <widget class="QRadioButton" name="X64_radioButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>330</x>
       <y>20</y>
       <width>89</width>
       <height>16</height>
@@ -46,7 +50,7 @@
       <x>10</x>
       <y>10</y>
       <width>251</width>
-      <height>221</height>
+      <height>211</height>
      </rect>
     </property>
    </widget>
@@ -54,7 +58,7 @@
     <property name="geometry">
      <rect>
       <x>270</x>
-      <y>60</y>
+      <y>160</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -66,14 +70,158 @@
    <widget class="QTextEdit" name="Hex_textEdit">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>380</x>
       <y>10</y>
       <width>251</width>
-      <height>221</height>
+      <height>211</height>
      </rect>
     </property>
    </widget>
    <widget class="QCheckBox" name="Point_checkBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>80</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>使用地址</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="HEX_TO_ASM_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>190</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HEX TO ASM</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="AddX_checkBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>120</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>使用前缀</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Blank_radioButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>100</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>空格</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Tabs_radioButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>100</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>制表符</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Add0X_radioButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>140</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0x00</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="AddX_radioButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>140</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>\x00</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Hex_radioButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>60</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HEX</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Dec_radioButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>60</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DEC</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Radix_checkBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -83,7 +231,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>使用地址</string>
+     <string>进制选择</string>
     </property>
    </widget>
   </widget>
